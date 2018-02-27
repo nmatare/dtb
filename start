@@ -1,0 +1,165 @@
+#!/bin/bash
+
+# DESCRIPTION
+# start will start the trading algorithm provided that (1) an algorithm of
+# type 'dtb' is detected in the proper directory, (2) IBController is running,
+# and (3) TWS/Gateway is running. At its core, start is simple a wrapper 
+# script for the algorithm's 'trader.R' logic. 
+
+# ARGUMENTS
+# --name 		[Character] - 
+# The specifed name of the algorithm
+
+# --strategy 		[Character] - 
+# The specified name of the quantstrat strategy 
+
+# --file 		[Character] - 
+# Either to print to terminal screen: 'stdout' 
+# or whether to log messages to a specified 
+# file default=stdout
+
+# --bars 		[Character] - 
+# The specified periodicity of OHLC price data; 
+# ['1week', '1day', '1hour', '30mins', '15mins', 
+# '5mins', '3mins', '1min', '30sec', '5sec']
+
+# --back_fill 		[Character] - 
+# The amount of data to backfill when initalizing the algorithim.
+# This is helpful when one has moving averages (or similar) that 
+# need 'n' number of periods to calculate averages. Backfill must
+# be specified in the form 'nS' where the last character may be 
+# any one of 'S' (seconds), 'D' (days), 'W' (weeks), 'M' (months),
+# and 'Y' (year). Interactive Brokers limits historical data 
+# requests up to 1 year. \n
+# WARNING: 'back_fill' will use 'bars' as the periodicity; i.e.,
+# back_fill = '1 Y' and bars = '1 min' _will_ be incredibly large"
+
+# --market 		[Character] - 
+# The desired market exchange [default = NYSE]
+
+# --market_open 	[Character] - 
+# The (local) time of market open [default = "09:30:00"]
+
+# --market_close 	[Character] - 
+# The (local) time of market close [default = "16:00:00"]
+
+# --exchange 		[Character] - 
+# The desired market exchange ['ib', 'coinbase']
+
+################################################################################
+
+set -e
+
+# Script must run as root
+if [[ $(/usr/bin/id -u) -ne 0 ]]; then
+    echo "Permission denied; please run as sudo or root";
+    exit
+fi
+
+# Check that IB is running
+SERVICE="ibcontroller@algo.service"
+STATUS="$(systemctl is-active $SERVICE)"
+
+if [ "$STATUS" == "failed" ] || [ "$STATUS" == 'inactive' ]; then
+	echo "IBController is not running. Starting service and exiting; please restart this script ...";
+	systemctl start $SERVICE
+	systemctl enable $SERVICE
+	exit
+fi
+
+# Sync time
+
+# Default values
+PORT="4003"
+BACK_FILL="1Y"
+MARKET="NYSE"
+FILE="stdout"
+BARS="1day"
+MARKET_OPEN="09:30:00"
+MARKET_CLOSE="16:00:00"
+EXCHANGE="ib"
+TRADER="trade.R"
+
+# Argument assignment and checking
+_setArgs(){
+  while [ "$1" != "" ]; do
+    case "$1" in
+      "--name")
+        shift
+        NAME=$1
+        ;;
+      "--strategy")
+        shift
+        STRATEGY=$1
+        ;;
+      "--file")
+		    shift
+        FILE=$1
+        ;;
+      "--bars")
+		    shift
+        BARS=$1
+        ;;
+      "--back_fill")
+		    shift
+        BACK_FILL=$1
+        ;;
+      "--market")
+        shift
+        MARKET=$1
+        ;;
+      "--market_open")
+		    shift
+        MARKET_OPEN=$1
+        ;;
+      "--market_close")
+		    shift
+        MARKET_CLOSE=$1
+        ;;
+      "--exchange")
+		    shift
+        EXCHANGE=$1
+        ;;
+      "--port")
+		    shift
+        PORT=$1
+        ;;
+    esac
+    shift
+  done
+}
+
+_setArgs $*
+
+if [ -z "$STRATEGY" ]; then
+	echo "Missing a quantstrat strategy to trade"; exit
+fi
+
+if [ -z "$NAME" ]; then
+	echo "Did not find a specified algorithm; assuming $STRATEGY is the name of the algorithm"; 
+	NAME=$STRATEGY
+fi
+
+# Check that algorithim is installed and running
+DIR="/home/$SUDO_USER/projects/"$NAME"/lib/"$TRADER
+if ! [[ -f "$DIR" ]]; then
+	echo 
+	"Could not find deploy trading bot $NAME; make sure you have 
+	placed the algorithim in the /projects/$NAME/ directory, and there
+	is an accompanying $TRADER RScript."; exit
+fi
+
+# Start the algorithim
+"$(sudo -u $SUDO_USER $DIR			\
+	--name "$NAME"			\
+	--strategy "$STRATEGY"			\
+	--file "$FILE"				\
+	--bars "$BARS"				\
+	--back_fill "$BACK_FILL"			\
+	--market "$MARKET"			\
+	--market_open "$MARKET_OPEN"		\
+	--market_close "$MARKET_CLOSE"		\
+	--exchange "$EXCHANGE"			\
+	--port "$PORT"				
+)"
+

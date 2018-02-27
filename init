@@ -1,0 +1,237 @@
+#!/bin/bash
+
+# README  
+# You MUST change the default password of root and algo OR you will
+# expose your brokerage account and password to naive default passwords
+# which can be easily brute-forced and attacked. This WILL compromise
+# your brokage account and intellectual property.
+
+# DESCRIPTION
+# init sets up the VM to begin trading provided that an algorthim is 
+# located in /home/aglo/projects/ and is of type 'dtb'. init will
+# set options, ensure the IBcontroller is running, and init a connection
+# to the IB gateway. init ONLY needs to be run once, otherwise use start
+
+# ARGUMENTS
+# --account 		[Character] - 
+# Interactive Brokers ACCOUNT name 
+
+# --password 		[Character] - 
+# Account PASSWORD to Interactive Brokers 
+
+# --mode 		[Character] - 
+# Either 'live' or 'paper' trading mode
+
+# --port 		[Integer]   - 
+# API port number to connect to 
+# Interactive Brokers Gateway/TWS
+
+# --name 		[Character] - 
+# The specifed name of the algorithm
+
+# --strategy 		[Character] - 
+# The specified name of the quantstrat strategy 
+
+# --file 		[Character] -
+# Either to print to terminal screen: 'stdout' 
+# or whether to log messages to a specified file default=stdout
+
+# --bars 		[Character] - 
+# The specified periodicity of OHLC price data; 
+# ['1week', '1day', '1hour', '30mins', '15mins', 
+#  '5mins', '3mins', '1min', '30sec', '5sec']
+
+# --back_fill 		[Character] - 
+# 			The amount of data to backfill when initalizing the algorithim.
+# 			This is helpful when one has moving averages (or similar) that 
+# 			need 'n' number of periods to calculate averages. Backfill must
+# 			be specified in the form 'nS' where the last character may be 
+# 			any one of 'S' (seconds), 'D' (days), 'W' (weeks), 'M' (months),
+# 			and 'Y' (year). Interactive Brokers limits historical data 
+# 			requests up to 1 year. \n
+
+# 			WARNING: 'back_fill' will use 'bars' as the periodicity; i.e.,
+# 			back_fill = '1 Y' and bars = '1 min' _will_ be incredibly large"
+
+# --market 		[Character] - 
+# The desired market exchange [default = NYSE]
+
+# --market_open 	[Character] - 
+# The (local) time of market open [default = "09:30:00"] 
+
+# --market_close 	[Character] - 
+# The (local) time of market close [default = "16:00:00"]
+
+# --algorithm 		[Character] - 
+# The desired market exchange ['ib', 'coinbase']
+
+################################################################################
+
+set -e
+
+# Script must run as root
+if [[ $(/usr/bin/id -u) -ne 0 ]]; then
+    echo "Permission denied; please run as sudo or root";
+    exit
+fi
+
+# Default values
+PORT="4003"
+MODE="paper"
+BACK_FILL="1Y"
+MARKET="NYSE"
+FILE="stdout"
+BARS="1day"
+MARKET_OPEN="09:30:00"
+MARKET_CLOSE="16:00:00"
+EXCHANGE="ib"
+
+# Argument assignment and checking
+_setArgs(){
+  while [ "$1" != "" ]; do
+    case "$1" in
+      "--account")
+        shift
+        ACCOUNT=$1
+        ;;
+      "--password")
+		    shift
+        PASSWORD=$1
+        ;;
+      "--mode")
+		    shift
+        MODE=$1
+        ;;
+      "--port")
+		    shift
+        PORT=$1
+        ;;
+    # Optional arguments to pass to start.sh if determined
+      "--name")
+        shift
+        NAME=$1
+        ;;      
+      "--strategy")
+        shift
+        STRATEGY=$1
+        ;;
+      "--file")
+		    shift
+        FILE=$1
+        ;;
+      "--bars")
+		    shift
+        BARS=$1
+        ;;
+      "--back_fill")
+		    shift
+        BACK_FILL=$1
+        ;;
+      "--market")
+		    shift
+        MARKET=$1
+        ;;
+      "--market_open")
+		    shift
+        MARKET_OPEN=$1
+        ;;
+      "--market_close")
+		    shift
+        MARKET_CLOSE=$1
+        ;;
+      "--exchange")
+		    shift
+        EXCHANGE=$1
+        ;;
+    esac
+    shift
+  done
+}
+
+_setArgs $*
+
+if [ -z "$NAME" ]; then
+	echo "Missing the name of the algorithm"; exit
+fi
+
+if [ "$HOSTNAME" != "$NAME" ]; then
+	read -p "You must first set the server's HOSTNAME to $NAME; this 
+	requires a reboot. Press 'Enter' to set the HOSTNAME and restart the computer.
+	You MUST run init AGAIN after reboot"; 
+	hostnamectl set-hostname "$NAME";
+	sudo reboot
+fi
+
+if [ -z "$ACCOUNT" ]; then
+	echo "Missing Interative Brokers Account"; exit
+elif [ -z "$PASSWORD" ]; then
+	echo "Missing Interative Brokers Password"; exit
+else
+  echo "Using account: $ACCOUNT with $MODE trading mode on API port $PORT"
+fi
+
+# Change root password
+echo "Please enter the new root password:"
+read -s pwd_1
+echo "Please repeat the new root password:"
+read -s pwd_2
+if [ $pwd_1 != $pwd_2 ]; then
+    echo "Passwords do not match"
+     exit    
+fi
+echo -e "$pwd_1\n$pwd_2" | passwd --quiet root
+# echo "Root's password was successfully changed"
+
+# Change $SUDO_USER password
+echo "Please enter the new password for user $SUDO_USER:"
+read -s pwd_1
+echo "Please repeat the new password for user $SUDO_USER:"
+read -s pwd_2
+if [ $pwd_1 != $pwd_2 ]; then
+    echo "Passwords do not match"
+     exit    
+fi
+echo -e "$pwd_1\n$pwd_2" | passwd --quiet "$SUDO_USER"
+echo "$SUDO_USER's password was successfully changed"
+
+# Modify algo.ini 
+sed -i "/IbLoginId/c\IbLoginId=$ACCOUNT" /etc/ibcontroller/algo.ini
+sed -i "/IbPassword/c\IbPassword=$PASSWORD" /etc/ibcontroller/algo.ini
+sed -i "/TradingMode/c\TradingMode=$MODE" /etc/ibcontroller/algo.ini
+sed -i "/ForceTwsApiPort/c\ForceTwsApiPort=$PORT" /etc/ibcontroller/algo.ini
+
+if [ "$MODE" == "live" ]; then
+
+	read -p "*** WARNING *** You are trading with real money! Do you wish to continue? (y/n)" choice
+
+	case "$choice" in 
+	  y|Y|yes|Yes 	)  		;; 
+	  n|N|no|No 	) exit 	;;
+	  * 			) echo "Unknown option selected; exiting ..."; exit ;;
+	esac	
+fi
+
+read -p "Setup was successfull. Do you wish to start trading? (y/n)" choice
+
+case "$choice" in 
+  y|Y|yes|Yes 	) 
+	"$(. ./start 					\
+		--name "$NAME"			\
+		--strategy "$STRATEGY"			\
+		--file "$FILE"				\
+		--bars "$BARS"				\
+		--back_fill "$BACK_FILL"			\
+		--market "$MARKET"			\
+		--market_open "$MARKET_OPEN"		\
+		--market_close "$MARKET_CLOSE"		\
+		--exchange "$EXCHANGE"			\
+		--port "$PORT")"	
+  ;; # dot space dot dash to execute in same env
+  n|N|no|No 	) 	exit 		 	;;
+  * 			) echo "Unknown option selected; exiting ..."; exit ;;
+esac
+
+
+
+
+
