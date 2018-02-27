@@ -1,7 +1,7 @@
 # DTB
 Deployable Trading Bot (Interactive Brokers)
 
-* Version 0.9.12
+* Version 1.0.0
 
 ## Description
 This Virtual Machine (VM) is set up to automate the execution of [quantstrat](https://github.com/braverock/quantstrat) trading strategies. The VM establishes a connection to either Interactive Brokers Trader Workstation or Gateway. The execution platform is fully automated and will start, stop, shutdown, restart, and handle exceptions. 
