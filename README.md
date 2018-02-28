@@ -55,8 +55,8 @@ sudo ./stop
 | `--bars`          | The specified periodicity of OHLC price data; ['1week', '1day', '1hour', '30mins', '15mins', '5mins', '3mins', '1min', '30sec', '5sec']  [default = '1day']|
 | `--back_fill`     | The amount of data to backfill when initalizing the algorithim. This is helpful when one has moving averages (or similar) that need 'n' number of periods to calculate averages. Backfill must be specified in the form 'nS' where the last character may be any one of 'S' (seconds), 'D' (days), 'W' (weeks), 'M' (months), and 'Y' (year). Interactive Brokers limits historical data requests up to 1 year. [default = '1Y']|
 |`--market`         |The desired market exchange [default = NYSE]			|
-|`--market_open`    |The (local) time of market open [default = "09:30:00"]	|
-|`--market_close`   |The (local) time of market close [default = "16:00:00"]|
+|`--market_open`    |The (local) time of market open [default = "09:30:00"]		|
+|`--market_close`   |The (local) time of market close [default = "16:00:00"]		|
 |`--exchange`      	|The desired market exchange [default = 'ib']			|
 
 ## Examples
@@ -64,7 +64,7 @@ sudo ./stop
 sudo ./init 			\
 --account john_doe 		\
 --password pass123 		\
---algo_name momentum 	\
+--algo_name momentum 		\
 --strategy 60month		\
 --mode paper
 ```
