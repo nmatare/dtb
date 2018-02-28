@@ -6,8 +6,7 @@ Deployable Trading Bot (Interactive Brokers)
 ## Description
 This Virtual Machine (VM) is set up to automate the execution of [quantstrat](https://github.com/braverock/quantstrat) trading strategies. The VM establishes a connection to either Interactive Brokers Trader Workstation or Gateway. The execution platform is fully automated and will start, stop, shutdown, restart, and handle exceptions. 
 
-* Please note that this repo is the /home/algo/ directory of the accompanying [VM](https://www.dropbox.com/sh/1jxdkv0skkwz7tl/AABwKEF-bpJn2OeFC1JN0CIea?dl=0). The primary purpose of this repo is to serve as dev version control. One needs to launch the VM either on AWS or locally to use the functionality described hereinafter.
-* Password to VM Link: '4q{GDhqHtv'
+* Please note that this repo is the /home/algo/ directory of the accompanying [VM](https://www.dropbox.com/sh/3peps1nd1s79eds/AAAUr1GwEf0_FGJK9Dz7x1r7a?dl=0). The primary purpose of this repo is to serve as dev version control. One needs to launch the [VM](https://www.dropbox.com/sh/3peps1nd1s79eds/AAAUr1GwEf0_FGJK9Dz7x1r7a?dl=0) either on AWS or locally to use the functionality described hereinafter.
 
 ## Features
   - Hardened ArchLinux Virtual Machine;
@@ -15,7 +14,7 @@ This Virtual Machine (VM) is set up to automate the execution of [quantstrat](ht
   - 'trade.R' R execution of trading strategies.
 
 ## Installation
-1.  Download the latest version of the [VM](https://www.dropbox.com/sh/1jxdkv0skkwz7tl/AABwKEF-bpJn2OeFC1JN0CIea?dl=0);
+1.  Download the latest version of the [VM](https://www.dropbox.com/sh/3peps1nd1s79eds/AAAUr1GwEf0_FGJK9Dz7x1r7a?dl=0);
 2. 	Install the VM on an AWS server or;
 3. 	Launch the VM locally using either VirtualBox or VM Ware;
 4.	SSH **with X11 port forwarding enabled** into the VM; e.g., autossh -X algo@192.168.56.3; and
