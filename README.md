@@ -57,7 +57,7 @@ sudo ./stop
 |`--market`         |The desired market exchange [default = NYSE]			|
 |`--market_open`    |The (local) time of market open [default = "09:30:00"]	|
 |`--market_close`   |The (local) time of market close [default = "16:00:00"]|
-|`--exchange`      	|The desired market exchange [default = 'ib']			|
+|`--exchange`      	|The desired broker [default = 'ib']			|
 
 ## Examples
 ```sh
