@@ -64,7 +64,7 @@ sudo ./stop
 sudo ./init 			\
 --account john_doe 		\
 --password pass123 		\
---algo_name momentum 	\
+--algo_name momentum 		\
 --strategy 60month		\
 --mode paper
 ```
