@@ -48,12 +48,12 @@ sudo ./stop
 #### Configurable Arguments
 | Argument | Description
 | ---------------------------- | ------------------------------------------  |
-| `--mode`          | Either 'live' or 'paper' trading mode 				 |
-| `--port`          | API port number to connect to Interactive Brokers Gateway/TWS|
-| `--algo_name`     | The specifed name of the algorithm |
-| `--file`          | Either to print to terminal screen: ['stdin', 'stdout', 'stderr'] or whether to log messages to a specified file default=stdin|
-| `--bars`          | The specified periodicity of OHLC price data; ['1week', '1day', '1hour', '30mins', '15mins', '5mins', '3mins', '1min', '30sec', '5sec']|
-| `--back_fill`     | The amount of data to backfill when initalizing the algorithim. This is helpful when one has moving averages (or similar) that need 'n' number of periods to calculate averages. Backfill must	be specified in the form 'nS' where the last character may be any one of 'S' (seconds), 'D' (days), 'W' (weeks), 'M' (months), and 'Y' (year). Interactive Brokers limits historical data requests up to 1 year. 	|
+| `--mode`          | Either 'live' or 'paper' trading mode [default = 'paper']				 |
+| `--port`          | API port number to connect to Interactive Brokers Gateway/TWS [default = '4003'] |
+| `--algo_name`     | The specifed name of the algorithm [default = ''] |
+| `--file`          | Either to print to terminal screen: ['stdin', 'stdout', 'stderr'] or whether to log messages to a specified file [default = 'stdin']|
+| `--bars`          | The specified periodicity of OHLC price data; ['1week', '1day', '1hour', '30mins', '15mins', '5mins', '3mins', '1min', '30sec', '5sec'] [default = '1day']|
+| `--back_fill`     | The amount of data to backfill when initalizing the algorithim. This is helpful when one has moving averages (or similar) that need 'n' number of periods to calculate averages. Backfill must be specified in the form 'nS' where the last character may be any one of 'S' (seconds), 'D' (days), 'W' (weeks), 'M' (months), and 'Y' (year). Interactive Brokers limits historical data requests up to 1 year. [default = '1Y']|
 |`--market`         |The desired market exchange [default = NYSE]			|
 |`--market_open`    |The (local) time of market open [default = "09:30:00"]	|
 |`--market_close`   |The (local) time of market close [default = "16:00:00"]|
