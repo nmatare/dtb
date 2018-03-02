@@ -34,16 +34,16 @@
 # WARNING: 'back_fill' will use 'bars' as the periodicity; i.e.,
 # back_fill = '1 Y' and bars = '1 min' _will_ be incredibly large"
 
-# --market 		[Character] - 
-# The desired market exchange [default = NYSE]
-
-# --market_open 	[Character] - 
-# The (local) time of market open [default = "09:30:00"]
-
-# --market_close 	[Character] - 
-# The (local) time of market close [default = "16:00:00"]
-
 # --exchange 		[Character] - 
+# The desired (market) exchange [default = NYSE]
+
+# --exchange_open 	[Character] - 
+# The (local) time of exchange (market) open [default = "09:30:00"]
+
+# --exchange_close 	[Character] - 
+# The (local) time of exchange (market) close [default = "16:00:00"]
+
+# --broker		[Character] - 
 # The desired broker ['ib', 'coinbase']
 
 ################################################################################
@@ -72,12 +72,12 @@ fi
 # Default values
 PORT="4003"
 BACK_FILL="1Y"
-MARKET="NYSE"
+EXCHANGE="NYSE"
 FILE="stdout"
 BARS="1day"
-MARKET_OPEN="09:30:00"
-MARKET_CLOSE="16:00:00"
-EXCHANGE="ib"
+EXCHANGE_OPEN="09:30:00"
+EXCHANGE_CLOSE="16:00:00"
+BROKER="ib"
 TRADER="trade.R"
 
 # Argument assignment and checking
@@ -104,21 +104,21 @@ _setArgs(){
 		    shift
         BACK_FILL=$1
         ;;
-      "--market")
-        shift
-        MARKET=$1
-        ;;
-      "--market_open")
-		    shift
-        MARKET_OPEN=$1
-        ;;
-      "--market_close")
-		    shift
-        MARKET_CLOSE=$1
-        ;;
       "--exchange")
-		    shift
+        shift
         EXCHANGE=$1
+        ;;
+      "--exchange_open")
+		    shift
+        EXCHANGE_OPEN=$1
+        ;;
+      "--exchange_close")
+		    shift
+        EXCHANGE_CLOSE=$1
+        ;;
+      "--broker")
+		    shift
+        BROKER=$1
         ;;
       "--port")
 		    shift
@@ -156,10 +156,10 @@ fi
 	--file "$FILE"				\
 	--bars "$BARS"				\
 	--back_fill "$BACK_FILL"			\
-	--market "$MARKET"			\
-	--market_open "$MARKET_OPEN"		\
-	--market_close "$MARKET_CLOSE"		\
 	--exchange "$EXCHANGE"			\
+	--exchange_open "$EXCHANGE_OPEN"		\
+	--exchange_close "$EXCHANGE_CLOSE"		\
+	--broker "$BROKER"			\
 	--port "$PORT"				
 )"
 
