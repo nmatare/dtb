@@ -33,7 +33,7 @@ This will initalize the VM for trading based upon specified arguments. See the b
 
 To manually start and stop the algorithm use start or stop, respectively.
 ```sh
-sudo ./start --algo_name pair_trade --strategy GOOGL_and_AAPL
+sudo ./start --name pair_trade --strategy GOOGL_and_AAPL
 sudo ./stop
 ```
 
@@ -50,7 +50,7 @@ sudo ./stop
 | ---------------------------- | ------------------------------------------  |
 | `--mode`          | Either 'live' or 'paper' trading mode [default = 'paper']				 |
 | `--port`          | API port number to connect to Interactive Brokers Gateway/TWS [default = '4003'] |
-| `--algo_name`     | The specifed name of the algorithm [default = ""] |
+| `--name`     | The specifed name of the algorithm [default = ""] |
 | `--file`          | Either to print to terminal screen: ['stdin', 'stdout', 'stderr'] or whether to log messages to a specified file [default = 'stdin']|
 | `--bars`          | The specified periodicity of OHLC price data; ['1week', '1day', '1hour', '30mins', '15mins', '5mins', '3mins', '1min', '30sec', '5sec']  [default = '1day']|
 | `--back_fill`     | The amount of data to backfill when initalizing the algorithim. This is helpful when one has moving averages (or similar) that need 'n' number of periods to calculate averages. Backfill must be specified in the form 'nS' where the last character may be any one of 'S' (seconds), 'D' (days), 'W' (weeks), 'M' (months), and 'Y' (year). Interactive Brokers limits historical data requests up to 1 year. [default = '1Y']|
@@ -64,7 +64,7 @@ sudo ./stop
 sudo ./init 			\
 --account john_doe 		\
 --password pass123 		\
---algo_name momentum 		\
+--name momentum 		\
 --strategy 60month		\
 --mode paper
 ```
@@ -75,7 +75,7 @@ sudo ./stop
 
 ```sh
 sudo ./start 			\
---algo_name momentum 		\
+--name momentum 		\
 --strategy 60month 		\
 --mode live
 ```
