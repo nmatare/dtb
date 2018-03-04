@@ -155,7 +155,8 @@ if [ -z "$NAME" ]; then
 fi
 
 if [ "$HOSTNAME" != "$NAME" ]; then
-	read -p "You must first set the server's HOSTNAME to $NAME; this 
+	read -p \
+  "You must first set the server's HOSTNAME to $NAME; this 
 	requires a reboot. Press 'Enter' to set the HOSTNAME and restart the computer.
 	You MUST run init AGAIN after reboot"; 
 	hostnamectl set-hostname "$NAME";
