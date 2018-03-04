@@ -9,15 +9,15 @@ if [[ $(/usr/bin/id -u) -ne 0 ]]; then
     exit
 fi
 
-KILL="$(pgrep -f "ib-tws")" 
+PIDS="$(pgrep -f "ib-tws")" 
 
-if [ "$KILL" == "" ]; then
+if [ -z "$PIDS" ]; then
 	echo "No processes to kill; IBController is not running";
 	exit
 fi
 
-sudo kill KILL
-
+sudo kill -9 "$PIDS"
+echo "IBController and TWS/Gateway has been stopped"
 
 
 
