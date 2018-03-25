@@ -16,8 +16,9 @@ if [ -z "$PIDS" ]; then
 	exit
 fi
 
-sudo kill -9 "$PIDS"
-echo "IBController and TWS/Gateway has been stopped"
+sudo kill $PIDS
+echo "IBController and TWS/Gateway has been stopped";
+exit 
 
 
 
