@@ -42,7 +42,7 @@
 #  '5mins', '3mins', '1min', '30sec', '5sec']
 
 # --back_fill 		[Character] - 
-# 			The amount of data to backfill when initalizing the algorithim.
+# 			The amount of data to backfill when initalizing the algorithm.
 # 			This is helpful when one has moving averages (or similar) that 
 # 			need 'n' number of periods to calculate averages. Backfill must
 # 			be specified in the form 'nS' where the last character may be 
@@ -69,12 +69,6 @@
 
 set -e
 
-# Script must run as root
-if [[ $(/usr/bin/id -u) -ne 0 ]]; then
-    echo "Permission denied; please run as sudo or root";
-    exit
-fi
-
 # Default values
 PORT="4003"
 MODE="paper"
@@ -85,6 +79,12 @@ BARS="1day"
 EXCHANGE_OPEN="09:30:00"
 EXCHANGE_CLOSE="16:00:00"
 BROKER="ib"
+
+# Script must run as root
+if [[ $(/usr/bin/id -u) -ne 0 ]]; then
+    echo "Permission denied; please run as sudo or root";
+    exit
+fi
 
 # Argument assignment and checking
 _setArgs(){
@@ -156,9 +156,9 @@ fi
 
 if [ "$HOSTNAME" != "$NAME" ]; then
 	read -p \
-  "You must first set the server's HOSTNAME to $NAME; this 
-	requires a reboot. Press 'Enter' to set the HOSTNAME and restart the computer.
-	You MUST run init AGAIN after reboot"; 
+  "You must first set the server's HOSTNAME to $NAME; this requires a reboot. 
+  Press 'Enter' to set the HOSTNAME and restart the computer.
+	You __MUST__ run 'init' AGAIN after reboot"; 
 	hostnamectl set-hostname "$NAME";
 	sudo reboot
 fi
@@ -213,6 +213,10 @@ if [ "$MODE" == "live" ]; then
 fi
 
 read -p "Setup was successfull. Do you wish to start trading? (y/n)" choice
+
+if [ -z "$STRATEGY" ]; then
+  echo "Please specify a strategy for the $NAME algorithm"; exit
+fi
 
 case "$choice" in 
   y|Y|yes|Yes 	) 

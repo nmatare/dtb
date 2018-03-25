@@ -1,7 +1,7 @@
 # DTB
 Deployable Trading Bot (Interactive Brokers)
 
-* Version 1.0.2
+* Version 1.0.3
 
 ## Description
 This Virtual Machine (VM) is set up to automate the execution of [quantstrat](https://github.com/braverock/quantstrat) trading strategies. The VM establishes a connection to either Interactive Brokers Trader Workstation or Gateway. The execution platform is fully automated and will start, stop, shutdown, restart, and handle exceptions. 
@@ -9,19 +9,18 @@ This Virtual Machine (VM) is set up to automate the execution of [quantstrat](ht
 * Please note that this repo is the /home/algo/ directory of the accompanying [VM](https://www.dropbox.com/sh/jc94pfbe0r6cgrw/AAAkD46RrT6O2y5XyY1bbROka?dl=0). The primary purpose of this repo is to serve as dev version control. One needs to launch the VM either on AWS or locally to use the functionality described hereinafter.
 
 ## Features
-  - Hardened ArchLinux Virtual Machine;
+  - Hardened Arch Linux Virtual Machine;
   - [IBController](https://github.com/ib-controller/ib-controller) service controls IB Gateway and Trader Workstation start, shutdown, and restart; and
   - 'trade.R' R execution of trading strategies.
 
 ## Installation
 1.  Download the latest version of the [VM](https://www.dropbox.com/sh/jc94pfbe0r6cgrw/AAAkD46RrT6O2y5XyY1bbROka?dl=0);
+* Default passwords are: {[user: root, password: root], [user: algo, password: algo]}
 2. 	Install the VM on an AWS server or;
 3. 	Launch the VM locally using either VirtualBox or VM Ware;
 4.	SSH **with X11 port forwarding enabled** into the VM; e.g., autossh -X algo@192.168.56.3; and
 5.  Place your algorithm into the /home/algo/projects/ directory, making sure that
 	/home/algo/projects/algorithm/lib has the RScript 'trade.R'.
-
-* Default passwords are: {[user: root, password: root], [user: algo, password: algo]}
 
 ## Usage
 From the user's (algo) home directoy first initialize the algorithm. 
@@ -48,16 +47,16 @@ sudo ./stop
 #### Configurable Arguments
 | Argument | Description
 | ---------------------------- | ------------------------------------------  |
-| `--mode`          | Either 'live' or 'paper' trading mode [default = 'paper']				 |
-| `--port`          | API port number to connect to Interactive Brokers Gateway/TWS [default = '4003'] |
-| `--name`     | The specifed name of the algorithm [default = ""] |
-| `--file`          | Either to print to terminal screen: ['stdin', 'stdout', 'stderr'] or whether to log messages to a specified file [default = 'stdin']|
-| `--bars`          | The specified periodicity of OHLC price data; ['1week', '1day', '1hour', '30mins', '15mins', '5mins', '3mins', '1min', '30sec', '5sec']  [default = '1day']|
-| `--back_fill`     | The amount of data to backfill when initalizing the algorithim. This is helpful when one has moving averages (or similar) that need 'n' number of periods to calculate averages. Backfill must be specified in the form 'nS' where the last character may be any one of 'S' (seconds), 'D' (days), 'W' (weeks), 'M' (months), and 'Y' (year). Interactive Brokers limits historical data requests up to 1 year. [default = '1Y']|
-|`--exchange`         |The desired exchange (market) exchange [default = NYSE]			|
-|`--exchange_open`    |The (local) time of exchange (market) open [default = "09:30:00"]	|
-|`--mexchange_close`   |The (local) time of exchange (market) close [default = "16:00:00"]|
-|`--broker`      	|The desired broker [default = 'ib']			|
+| `--mode`          | Either 'live' or 'paper' trading mode [default='paper']				 |
+| `--port`          | API port number to connect to Interactive Brokers Gateway/TWS [default='4003'] |
+| `--name`     | The specifed name of the algorithm [default=""] |
+| `--file`          | Either to print to terminal screen: ['stdin', 'stdout', 'stderr'] or whether to log messages to a specified file [default='stdin']|
+| `--bars`          | The specified periodicity of OHLC price data; ['1week', '1day', '1hour', '30mins', '15mins', '5mins', '3mins', '1min', '30sec', '5sec']  [default='1day']|
+| `--back_fill`     | The amount of data to backfill when initalizing the algorithim. This is helpful when one has moving averages (or similar) that need 'n' number of periods to calculate averages. Backfill must be specified in the form 'nS' where the last character may be any one of 'S' (seconds), 'D' (days), 'W' (weeks), 'M' (months), and 'Y' (year). Interactive Brokers limits historical data requests up to 1 year. [default='1Y']|
+|`--exchange`         |The desired exchange (market) exchange [default=NYSE]			|
+|`--exchange_open`    |The (local) time of exchange (market) open [default="09:30:00"]	|
+|`--exchange_close`   |The (local) time of exchange (market) close [default="16:00:00"]|
+|`--broker`      	|The desired broker [default='ib']			|
 
 ## Examples
 ```sh

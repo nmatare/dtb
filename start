@@ -50,23 +50,8 @@
 
 set -e
 
-# Script must run as root
-if [[ $(/usr/bin/id -u) -ne 0 ]]; then
-    echo "Permission denied; please run as sudo or root";
-    exit
-fi
-
-# Check that IB is running
+# Default values 
 SERVICE="ibcontroller@algo.service"
-
-if [ `systemctl is-active $SERVICE` == "failed" ] || [ `systemctl is-active $SERVICE` == 'inactive' ]; then
-	echo "IBController is not running. Starting service and exiting; please restart this script ...";
-	sudo systemctl enable $SERVICE;
-  sudo systemctl start $SERVICE;
-	exit
-fi
-
-# Default values
 PORT="4003"
 BACK_FILL="1Y"
 EXCHANGE="NYSE"
@@ -76,6 +61,21 @@ EXCHANGE_OPEN="09:30:00"
 EXCHANGE_CLOSE="16:00:00"
 BROKER="ib"
 TRADER="trade.R"
+
+# Script must run as root
+if [[ $(/usr/bin/id -u) -ne 0 ]]; then
+    echo "Permission denied; please run as sudo or root";
+    exit
+fi
+
+# Check that IB is running
+if [ `systemctl is-active $SERVICE` == "failed" ] || [ `systemctl is-active $SERVICE` == 'inactive' ]; then
+	echo "IBController is inactive and not running. 
+  Starting service and exiting; please run 'start' again ...";
+	sudo systemctl enable $SERVICE;
+  sudo systemctl start $SERVICE;
+	exit
+fi
 
 # Argument assignment and checking
 _setArgs(){

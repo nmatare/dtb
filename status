@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# DESCRIPTION
+# checks the status of IBcontroller and Interactive Brokers TWS/Gateway
+
+set -e
+if [[ $(/usr/bin/id -u) -ne 0 ]]; then
+    echo "Permission denied; please run as sudo or root";
+    exit
+fi
+
+sudo systemctl status ibcontroller@algo.service
+
