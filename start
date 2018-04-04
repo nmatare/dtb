@@ -14,9 +14,9 @@
 # The specified name of the quantstrat strategy 
 
 # --file 		[Character] - 
-# Either to print to terminal screen: 'stdout' 
+# Either to print to terminal screen: 'stdin' 
 # or whether to log messages to a specified 
-# file default=stdout
+# file default=stdin
 
 # --bars 		[Character] - 
 # The specified periodicity of OHLC price data; 
@@ -55,7 +55,7 @@ SERVICE="ibcontroller@algo.service"
 PORT="4003"
 BACK_FILL="1Y"
 EXCHANGE="NYSE"
-FILE="stdout"
+FILE="stdin"
 BARS="1day"
 EXCHANGE_OPEN="09:30:00"
 EXCHANGE_CLOSE="16:00:00"
@@ -70,11 +70,11 @@ fi
 
 # Check that IB is running
 if [ `systemctl is-active $SERVICE` == "failed" ] || [ `systemctl is-active $SERVICE` == 'inactive' ]; then
-	echo "IBController is inactive and not running. 
-  Starting service and exiting; please run 'start' again ...";
-	sudo systemctl enable $SERVICE;
-  sudo systemctl start $SERVICE;
-	exit
+	echo "IBController is inactive and not running." 
+  echo "Starting service and exiting; please run 'start' again ..."
+	sudo systemctl enable $SERVICE
+  sudo systemctl start $SERVICE
+	exit 1;
 fi
 
 # Argument assignment and checking
@@ -133,17 +133,18 @@ if [ -z "$STRATEGY" ]; then
 fi
 
 if [ -z "$NAME" ]; then
-	echo "Did not find a specified algorithm; assuming $STRATEGY is the name of the algorithm"; 
-	NAME=$STRATEGY
+	echo "Did not find a specified algorithm; assuming $STRATEGY is the"
+  echo "name of the algorithm" 
+	NAME=$STRATEGY;
 fi
 
 # Check that algorithim is installed and running
 DIR="/home/$SUDO_USER/projects/"$NAME"/lib/"$TRADER
 if ! [[ -f "$DIR" ]]; then
-	echo 
-	"Could not find deploy trading bot $NAME; make sure you have 
-	placed the algorithim in the /projects/$NAME/ directory, and there
-	is an accompanying $TRADER RScript."; exit
+	echo "Could not find deploy trading bot $NAME; make sure you have placed the" 
+  echo "algorithim in the /projects/$NAME/ directory, and there is an"
+  echo "accompanying $TRADER RScript."
+  exit 1;
 fi
 
 # Start the algorithim

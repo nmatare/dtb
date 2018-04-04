@@ -33,8 +33,8 @@
 # The specified name of the quantstrat strategy 
 
 # --file 		[Character] -
-# Either to print to terminal screen: 'stdout' 
-# or whether to log messages to a specified file default=stdout
+# Either to print to terminal screen: 'stdin' 
+# or whether to log messages to a specified file default=stdin
 
 # --bars 		[Character] - 
 # The specified periodicity of OHLC price data; 
@@ -74,7 +74,7 @@ PORT="4003"
 MODE="paper"
 BACK_FILL="1Y"
 EXCHANGE="NYSE"
-FILE="stdout"
+FILE="stdin"
 BARS="1day"
 EXCHANGE_OPEN="09:30:00"
 EXCHANGE_CLOSE="16:00:00"
@@ -156,9 +156,9 @@ fi
 
 if [ "$HOSTNAME" != "$NAME" ]; then
 	read -p \
-  "You must first set the server's HOSTNAME to $NAME; this requires a reboot. 
-  Press 'Enter' to set the HOSTNAME and restart the computer.
-	You __MUST__ run 'init' AGAIN after reboot"; 
+  "You must first set the server's HOSTNAME to $NAME; this requires a reboot."
+  " Press 'Enter' to set the HOSTNAME and restart the computer.	
+  You __MUST__ run 'init' AGAIN after reboot"
 	hostnamectl set-hostname "$NAME";
 	sudo reboot
 fi
@@ -203,7 +203,9 @@ sed -i "/ForceTwsApiPort/c\ForceTwsApiPort=$PORT" /etc/ibcontroller/algo.ini
 
 if [ "$MODE" == "live" ]; then
 
-	read -p "*** WARNING *** You are trading with real money! Do you wish to continue? (y/n)" choice
+	read -p /
+  "*** WARNING *** You are trading with real money! Do you wish to continue? (y/n)" /
+  choice
 
 	case "$choice" in 
 	  y|Y|yes|Yes 	)  		;; 
