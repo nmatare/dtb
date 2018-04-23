@@ -4,37 +4,54 @@ Deployable Trading Bot (Interactive Brokers)
 * Version 1.0.3
 
 ## Description
-This Virtual Machine (VM) is set up to automate the execution of [quantstrat](https://github.com/braverock/quantstrat) trading strategies. The VM establishes a connection to either Interactive Brokers Trader Workstation or Gateway. The execution platform is fully automated and will start, stop, shutdown, restart, and handle exceptions. 
+This Virtual Machine (VM) is set up to automate the execution of [quantstrat](https://github.com/braverock/quantstrat) trading strategies. The VM establishes a connection to the Interactive Brokers Trader Gateway, and trades your selected strategy. The execution platform is fully automated and will start, stop, shutdown, restart, and handle exceptions. 
 
 * Please note that this repo is the /home/algo/ directory of the accompanying [VM](https://www.dropbox.com/sh/jc94pfbe0r6cgrw/AAAkD46RrT6O2y5XyY1bbROka?dl=0). The primary purpose of this repo is to serve as dev version control. One needs to launch the VM either on AWS or locally to use the functionality described hereinafter.
 
 ## Features
-  - Hardened Arch Linux Virtual Machine;
-  - [IBController](https://github.com/ib-controller/ib-controller) service controls IB Gateway and Trader Workstation start, shutdown, and restart; and
-  - 'trade.R' R execution of trading strategies.
-
+  - Debian 8 Virtual Machine;
+  - [IBController](https://github.com/ib-controller/ib-controller) systemd daemon controls IB Gateway start, shutdown, and restart; 
+  - Multiple account support, a singular 'DTB' can handle multiple Interactive Broker gateway instances, with each user(strategy) sandbox'ed into it's own environment; and
+  - 'trade.R' R execution and trade.py Python of trading strategies.
+ 
 ## Installation
 1.  Download the latest version of the [VM](https://www.dropbox.com/sh/jc94pfbe0r6cgrw/AAAkD46RrT6O2y5XyY1bbROka?dl=0);
 * Default passwords are: {[user: root, password: root], [user: algo, password: algo]}
-2. 	Install the VM on an AWS server or;
-3. 	Launch the VM locally using either VirtualBox or VM Ware;
-4.	SSH **with X11 port forwarding enabled** into the VM; e.g., autossh -X algo@192.168.56.3; and
+2a. 	Install the VM on an AWS server or;
+2b. 	Launch the VM locally using either VirtualBox or VM Ware;
+4.	SSH into the VM; e.g., autossh -X algo@192.168.56.3; and
 5.  Place your algorithm into the /home/algo/projects/ directory, making sure that
 	/home/algo/projects/algorithm/lib has the RScript 'trade.R'.
+6. Run 'init' to initalize the strategy
 
 ## Usage
-From the user's (algo) home directoy first initialize the algorithm. 
+From the user's home directoy first initialize the algorithm. In this example, the user's name is 'algo':
 ```sh
 cd /home/algo/
 sudo ./init
 ```
-This will initalize the VM for trading based upon specified arguments. See the below section 'Arguments' to see available parameters. It is **very important** to choose robust user and root passwords. Otherwise your passwords and intellectual property will be at considerable risk to otherwise preventable security vulnerabilities.
+
+This will initalize the VM for trading based upon specified arguments. See the below section 'Arguments' for available parameters. It is **very important** to choose robust user and root passwords. Otherwise your passwords and intellectual property will be at considerable risk to otherwise preventable security vulnerabilities.
 
 To manually start and stop the algorithm use start or stop, respectively.
 ```sh
 sudo ./start --name pair_trade --strategy GOOGL_and_AAPL
 sudo ./stop
 ```
+
+If you are running running multiple strategies on a singular instance; you need to configure each user with its own Interactive Brokers Gateway and configure
+the ibcontrollerd (daemon) appropriately. See below for details:
+```sh
+useradd algo2 -aG algo
+./home/algo2/install/ibgateway-latest-standalone-linux-x64.sh
+nano touch ibcontroller.ib 
+mv ibonctroller
+systemctl --user enable ibcontrollerd
+systemctl --user start ibcontrollerd
+systemctl --user status ibcontrollerd
+
+```
+
 
 ## Arguments
 #### Required Arguments

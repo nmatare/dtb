@@ -1,0 +1,8 @@
+# install4j response file for IB Gateway 970 (.1d) 20180417 14:06:19
+cmdLineArgs$StringArray="/home/algo/Jts","gdc1.ibllc.com\:4000"
+exeName=ibgateway
+executeLauncherAction$Boolean=false
+installerType=standalone
+sys.adminRights$Boolean=false
+sys.installationDir=/home/algo/Jts/ibgateway/970
+sys.languageId=en

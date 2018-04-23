@@ -1,0 +1,713 @@
+[INFO] logger started at Sun Apr 22 18:11:22 EDT 2018
+[INFO] executable name: /home/algo/ibgateway-latest-standalone-linux-x64.sh
+[INFO] install4j version: 7.0.4 (build 7094)
+[INFO] Properties: 
+-- listing properties --
+java.runtime.name=Java(TM) SE Runtime Environment
+exe4j.moduleName=/home/algo/ibgateway-latest-standalon...
+sun.boot.library.path=/home/algo/ibgateway-latest-standalon...
+java.vm.version=25.152-b16
+java.vm.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+path.separator=:
+java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+file.encoding.pkg=sun.io
+user.country=US
+sun.java.launcher=SUN_STANDARD
+sun.os.patch.level=unknown
+install4j.exeDir=/home/algo/
+java.vm.specification.name=Java Virtual Machine Specification
+user.dir=/home/algo/ibgateway-latest-standalon...
+java.runtime.version=1.8.0_152-b16
+java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment
+i4jv=0
+java.endorsed.dirs=/home/algo/ibgateway-latest-standalon...
+os.arch=amd64
+java.io.tmpdir=/tmp
+line.separator=
+
+java.vm.specification.vendor=Oracle Corporation
+os.name=Linux
+exe4j.totalDataLength=74085117
+sun.java2d.noddraw=true
+sun.jnu.encoding=UTF-8
+java.library.path=/home/algo/ibgateway-latest-standalon...
+sun.awt.enableExtraMouseButtons=true
+java.specification.name=Java Platform API Specification
+java.class.version=52.0
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+os.version=3.16.0-4-amd64
+i4j.vpt=true
+user.home=/home/algo
+install4j.cwd=/home/algo
+user.timezone=America/New_York
+java.awt.printerjob=sun.print.PSPrinterJob
+java.specification.version=1.8
+install4j.jvmDir=/home/algo/ibgateway-latest-standalon...
+file.encoding=UTF-8
+user.name=algo
+java.class.path=i4jruntime.jar
+java.vm.specification.version=1.8
+sun.arch.data.model=64
+java.home=/home/algo/ibgateway-latest-standalon...
+sun.java.command=com.install4j.runtime.launcher.UnixLa...
+java.specification.vendor=Oracle Corporation
+user.language=en
+awt.toolkit=sun.awt.X11.XToolkit
+java.vm.info=mixed mode
+java.version=1.8.0_152
+java.ext.dirs=/home/algo/ibgateway-latest-standalon...
+sun.boot.class.path=/home/algo/ibgateway-latest-standalon...
+java.vendor=Oracle Corporation
+install4j.appDir=/home/algo/
+file.separator=/
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+sun.cpu.endian=little
+sun.io.unicode.encoding=UnicodeLittle
+sun.font.fontmanager=sun.awt.X11FontManager
+sun.cpu.isalist=
+[INFO] Variable changed: sys.resolveUserSpecificInstallationDir=true[class java.lang.String]
+[INFO] System language 'en'
+[INFO] com.install4j.runtime.beans.actions.control.SetVariableAction [ID 3121]: Execute action
+       Property script: com.install4j.script.I4jScript_Internal_1
+       Property variableName: installerType
+       Property failIfNull: true
+       Property onlyIfUndefined: false
+       Property responseFileVariable: true
+       Property rollbackSupported: false
+       Variable changed: installerType=standalone[class java.lang.String]
+       Execute action successful after 2 ms
+[INFO] com.install4j.runtime.beans.actions.control.RunScriptAction [ID 1597]: Execute action
+       Property rollbackScript: null
+       Property script: com.install4j.script.I4jScript_Internal_2
+       Property rollbackSupported: false
+       Variable changed: sys.installationDir=/home/algo/Jts/ibgateway/970[class java.lang.String]
+       Execute action successful after 0 ms
+[INFO] com.install4j.runtime.beans.actions.control.SetVariableAction [ID 2316]: Execute action
+       Property script: com.install4j.script.I4jScript_Internal_3
+       Property variableName: jtsConfigDir
+       Property failIfNull: true
+       Property onlyIfUndefined: false
+       Property responseFileVariable: false
+       Property rollbackSupported: false
+       Variable changed: jtsConfigDir=/home/algo/Jts[class java.lang.String]
+       Execute action successful after 0 ms
+[INFO] com.install4j.runtime.beans.actions.control.SetVariableAction [ID 2518]: Execute action
+       Property script: com.install4j.script.I4jScript_Internal_4
+       Property variableName: vmOptionsPath
+       Property failIfNull: true
+       Property onlyIfUndefined: false
+       Property responseFileVariable: false
+       Property rollbackSupported: false
+       Variable changed: vmOptionsPath=/home/algo/Jts/ibgateway/970/ibgateway.vmoptions[class java.lang.String]
+       Execute action successful after 1 ms
+[INFO] com.install4j.runtime.beans.actions.control.SetVariableAction [ID 2953]: Execute action
+       Property script: com.install4j.script.I4jScript_Internal_5
+       Property variableName: cmdLineArgs
+       Property failIfNull: true
+       Property onlyIfUndefined: false
+       Property responseFileVariable: true
+       Property rollbackSupported: false
+       Variable changed: cmdLineArgs=[/home/algo/Jts, gdc1.ibllc.com:4000][class [Ljava.lang.String;]
+       Execute action successful after 0 ms
+[INFO] com.install4j.runtime.beans.actions.control.SetVariableAction [ID 1892]: Execute action
+       Property script: com.install4j.script.I4jScript_Internal_6
+       Property variableName: exeName
+       Property failIfNull: true
+       Property onlyIfUndefined: false
+       Property responseFileVariable: true
+       Property rollbackSupported: false
+       Variable changed: exeName=ibgateway[class java.lang.String]
+       Execute action successful after 1 ms
+[INFO] com.install4j.runtime.beans.actions.control.SetVariableAction [ID 2306]: Execute action
+       Property script: com.install4j.script.I4jScript_Internal_7
+       Property variableName: savedVmOptions
+       Property failIfNull: true
+       Property onlyIfUndefined: false
+       Property responseFileVariable: false
+       Property rollbackSupported: false
+       VM options file not found: /home/algo/Jts/ibgateway/970/ibgateway.vmoptions
+       Variable changed: savedVmOptions={content=}[class java.util.HashMap]
+       Execute action successful after 1 ms
+[INFO] com.install4j.runtime.beans.actions.control.SetVariableAction [ID 2401]: Execute action
+       Property script: com.install4j.script.I4jScript_Internal_8
+       Property variableName: mergedVmOptions
+       Property failIfNull: true
+       Property onlyIfUndefined: false
+       Property responseFileVariable: false
+       Property rollbackSupported: false
+       Variable changed: mergedVmOptions=#
+# This file contains VM parameters for IB Gateway 970.
+# Each parameter should be defined in a separate line and the
+# last line must be followed by a line feed. No leading or
+# trailing whitespaces are allowed in the same line, where a
+# parameter is defined.
+#
+# Lines starting with a '#' character are treated as comments
+# and ignored. Additionally, if a line contains a
+# '### keep on update' string, all parameters defined below will
+# be preserved on update.
+#
+
+# maximum Java heap size
+-Xmx768m
+
+-Dinstaller.uuid=cdf4d6bb-1d92-49d8-8d57-2ed7b619820c
+-DvmOptionsPath=/home/algo/Jts/ibgateway/970/ibgateway.vmoptions
+-Dsun.awt.nopixfmt=true
+-Dsun.java2d.noddraw=true
+-Dswing.boldMetal=false
+-Dsun.locale.formatasdefault=true
+
+### keep on update
+[class java.lang.String]
+       Execute action successful after 6 ms
+[INFO] com.install4j.runtime.beans.screens.StartupScreen [ID 1]: command: move 1 screens, executing actions, checking condition
+[INFO] com.install4j.runtime.beans.screens.FormScreen [ID 2738]: Show screen
+[INFO] com.install4j.runtime.beans.screens.FormScreen [ID 2738]: command: move 1 screens, executing actions, checking condition
+[INFO] com.install4j.runtime.beans.screens.InstallationScreen [ID 8]: Show screen
+[INFO] com.install4j.runtime.beans.actions.control.RunScriptAction [ID 3419]: Execute action
+       Property rollbackScript: null
+       Property script: com.install4j.script.I4jScript_Internal_11
+       Property rollbackSupported: false
+       Execute action successful after 1 ms
+[INFO] com.install4j.runtime.beans.actions.InstallFilesAction [ID 9]: Execute action
+       Property directoryResolverScript: null
+       Property fileFilterScript: null
+       Property sizeCalculatorScript: null
+       Property checkFreeSpace: true
+       Property delay: false
+       Property installRuntime: true
+       Property rollbackSupported: true
+       Property saveDownloadedFiles: false
+       Property showFileNames: true
+       Property triggerReboot: true
+       Property updateBundledJre: true
+       Property validateApplicationId: false
+       checking writable with unelevated
+       checking writable with unelevated
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/COPYRIGHT; size: 3244 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 05:24:55 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/LICENSE; size: 40 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/README; size: 46 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/THIRDPARTYLICENSEREADME-JAVAFX.txt; size: 63933 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 02:34:22 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/THIRDPARTYLICENSEREADME.txt; size: 145180 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 05:24:55 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/Welcome.html; size: 955 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/bin/java; size: 7734 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 05:24:55 EDT 2017, mode: 755, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/bin/javaws; size: 129139 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/bin/jcontrol; size: 6264 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/bin/jjs; size: 7941 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/bin/keytool; size: 7941 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/bin/orbd; size: 8149 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/bin/pack200; size: 7957 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/bin/policytool; size: 7997 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/bin/rmid; size: 7941 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/bin/rmiregistry; size: 7949 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/bin/servertool; size: 7965 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/bin/tnameserv; size: 8181 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/bin/unpack200; size: 231482 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/jli/libjli.so; size: 103427 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/jvm.cfg; size: 627 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 05:24:55 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libavplugin-53.so; size: 49482 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 02:34:22 EDT 2017, mode: 755, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libavplugin-54.so; size: 50109 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libavplugin-55.so; size: 50191 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libavplugin-56.so; size: 50191 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libavplugin-ffmpeg-56.so; size: 53268 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libawt.so; size: 772804 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 05:24:55 EDT 2017, mode: 755, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libawt_headless.so; size: 38128 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libawt_xawt.so; size: 442632 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libbci.so; size: 9594 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libdcpr.so; size: 207604 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libdecora_sse.so; size: 73636 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 02:34:22 EDT 2017, mode: 755, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libdeploy.so; size: 161767 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 05:24:55 EDT 2017, mode: 755, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libdt_socket.so; size: 22374 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libfontmanager.so; size: 525453 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libfxplugins.so; size: 151091 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 02:34:22 EDT 2017, mode: 755, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libglass.so; size: 226180 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libgstreamer-lite.so; size: 1774694 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libhprof.so; size: 177596 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 05:24:55 EDT 2017, mode: 755, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libinstrument.so; size: 49341 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libj2gss.so; size: 47509 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libj2pcsc.so; size: 15884 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libj2pkcs11.so; size: 78544 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libjaas_unix.so; size: 7684 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libjava.so; size: 226543 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libjava_crw_demo.so; size: 25734 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libjavafx_font.so; size: 16935 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 02:34:22 EDT 2017, mode: 755, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libjavafx_font_freetype.so; size: 25939 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libjavafx_font_pango.so; size: 24452 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libjavafx_font_t2k.so; size: 891625 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libjavafx_iio.so; size: 242127 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libjawt.so; size: 7013 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 05:24:55 EDT 2017, mode: 755, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libjdwp.so; size: 271682 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libjfr.so; size: 26329 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libjfxmedia.so; size: 228439 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 02:34:22 EDT 2017, mode: 755, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libjfxwebkit.so; size: 76147604 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libjpeg.so; size: 265387 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 05:24:55 EDT 2017, mode: 755, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libjsdt.so; size: 11678 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libjsig.so; size: 11052 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libjsound.so; size: 7350 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libjsoundalsa.so; size: 81370 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libkcms.so; size: 401494 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/liblcms.so; size: 423651 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libmanagement.so; size: 50289 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libmlib_image.so; size: 912788 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libnet.so; size: 115485 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libnio.so; size: 93308 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libnpjp2.so; size: 221525 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libnpt.so; size: 14342 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libprism_common.so; size: 57126 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 02:34:22 EDT 2017, mode: 755, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libprism_es2.so; size: 62456 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libprism_sw.so; size: 73022 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libresource.so; size: 10473 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 05:24:55 EDT 2017, mode: 755, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libsctp.so; size: 28651 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libsplashscreen.so; size: 451163 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libsunec.so; size: 257982 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libt2k.so; size: 493825 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libunpack.so; size: 164727 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libverify.so; size: 66472 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/libzip.so; size: 128794 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/server/Xusage.txt; size: 1423 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 05:24:55 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/amd64/server/libjvm.so; size: 17040347 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 05:24:55 EDT 2017, mode: 755, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/calendars.properties; size: 1378 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 05:24:55 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/charsets.jar; size: 3133655 bytes; exists: false
+       File options set to: [fileTime: Tue Oct 24 16:00:12 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/classlist; size: 84311 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 05:24:55 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/cmm/CIEXYZ.pf; size: 51236 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/cmm/GRAY.pf; size: 632 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/cmm/LINEAR_RGB.pf; size: 1044 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/cmm/PYCC.pf; size: 274474 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/cmm/sRGB.pf; size: 3144 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/content-types.properties; size: 5916 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/currency.data; size: 4134 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/deploy.jar; size: 2243644 bytes; exists: false
+       File options set to: [fileTime: Tue Oct 24 15:58:44 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/deploy/MixedCodeMainDialog.ui; size: 4507 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 05:24:55 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/deploy/MixedCodeMainDialogJs.ui; size: 6110 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/deploy/cautionshield.icns; size: 3588 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/deploy/ffjcext.zip; size: 13454 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/deploy/java-icon.ico; size: 29926 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/deploy/messages.properties; size: 2860 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/deploy/messages_de.properties; size: 3306 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/deploy/messages_es.properties; size: 3600 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/deploy/messages_fr.properties; size: 3409 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/deploy/messages_it.properties; size: 3223 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/deploy/messages_ja.properties; size: 6349 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/deploy/messages_ko.properties; size: 5712 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/deploy/messages_pt_BR.properties; size: 3285 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/deploy/messages_sv.properties; size: 3409 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/deploy/messages_zh_CN.properties; size: 4072 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/deploy/messages_zh_HK.properties; size: 3752 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/deploy/messages_zh_TW.properties; size: 3752 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/deploy/mixcode_s.png; size: 3115 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/deploy/splash.gif; size: 8590 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/deploy/splash@2x.gif; size: 15276 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/deploy/splash_11-lic.gif; size: 7805 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/deploy/splash_11@2x-lic.gif; size: 12250 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/applications/sun-java.desktop; size: 777 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/applications/sun-javaws.desktop; size: 619 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/applications/sun_java.desktop; size: 624 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/HighContrast/16x16/apps/sun-java.png; size: 417 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/HighContrast/16x16/apps/sun-javaws.png; size: 417 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/HighContrast/16x16/apps/sun-jcontrol.png; size: 417 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/HighContrast/16x16/mimetypes/gnome-mime-application-x-java-archive.png; size: 464 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/HighContrast/16x16/mimetypes/gnome-mime-application-x-java-jnlp-file.png; size: 464 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/HighContrast/16x16/mimetypes/gnome-mime-text-x-java.png; size: 464 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/HighContrast/48x48/apps/sun-java.png; size: 3451 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/HighContrast/48x48/apps/sun-javaws.png; size: 3451 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/HighContrast/48x48/apps/sun-jcontrol.png; size: 3451 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/HighContrast/48x48/mimetypes/gnome-mime-application-x-java-archive.png; size: 2088 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/HighContrast/48x48/mimetypes/gnome-mime-application-x-java-jnlp-file.png; size: 2088 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/HighContrast/48x48/mimetypes/gnome-mime-text-x-java.png; size: 2088 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/HighContrastInverse/16x16/apps/sun-java.png; size: 402 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/HighContrastInverse/16x16/apps/sun-javaws.png; size: 402 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/HighContrastInverse/16x16/apps/sun-jcontrol.png; size: 402 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/HighContrastInverse/16x16/mimetypes/gnome-mime-application-x-java-archive.png; size: 473 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/HighContrastInverse/16x16/mimetypes/gnome-mime-application-x-java-jnlp-file.png; size: 473 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/HighContrastInverse/16x16/mimetypes/gnome-mime-text-x-java.png; size: 473 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/HighContrastInverse/48x48/apps/sun-java.png; size: 3410 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/HighContrastInverse/48x48/apps/sun-javaws.png; size: 3410 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/HighContrastInverse/48x48/apps/sun-jcontrol.png; size: 3410 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/HighContrastInverse/48x48/mimetypes/gnome-mime-application-x-java-archive.png; size: 2085 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/HighContrastInverse/48x48/mimetypes/gnome-mime-application-x-java-jnlp-file.png; size: 2085 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/HighContrastInverse/48x48/mimetypes/gnome-mime-text-x-java.png; size: 2085 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/LowContrast/16x16/apps/sun-java.png; size: 519 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/LowContrast/16x16/apps/sun-javaws.png; size: 519 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/LowContrast/16x16/apps/sun-jcontrol.png; size: 519 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/LowContrast/16x16/mimetypes/gnome-mime-application-x-java-archive.png; size: 525 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/LowContrast/16x16/mimetypes/gnome-mime-application-x-java-jnlp-file.png; size: 525 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/LowContrast/16x16/mimetypes/gnome-mime-text-x-java.png; size: 525 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/LowContrast/48x48/apps/sun-java.png; size: 1507 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/LowContrast/48x48/apps/sun-javaws.png; size: 1507 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/LowContrast/48x48/apps/sun-jcontrol.png; size: 1507 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/LowContrast/48x48/mimetypes/gnome-mime-application-x-java-archive.png; size: 1948 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/LowContrast/48x48/mimetypes/gnome-mime-application-x-java-jnlp-file.png; size: 1948 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/LowContrast/48x48/mimetypes/gnome-mime-text-x-java.png; size: 1948 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/hicolor/16x16/apps/sun-java.png; size: 383 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/hicolor/16x16/apps/sun-javaws.png; size: 383 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/hicolor/16x16/apps/sun-jcontrol.png; size: 383 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/hicolor/16x16/mimetypes/gnome-mime-application-x-java-archive.png; size: 783 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/hicolor/16x16/mimetypes/gnome-mime-application-x-java-jnlp-file.png; size: 783 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/hicolor/16x16/mimetypes/gnome-mime-text-x-java.png; size: 783 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/hicolor/48x48/apps/sun-java.png; size: 1439 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/hicolor/48x48/apps/sun-javaws.png; size: 1439 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/hicolor/48x48/apps/sun-jcontrol.png; size: 1439 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/hicolor/48x48/mimetypes/gnome-mime-application-x-java-archive.png; size: 3202 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/hicolor/48x48/mimetypes/gnome-mime-application-x-java-jnlp-file.png; size: 3202 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/icons/hicolor/48x48/mimetypes/gnome-mime-text-x-java.png; size: 3202 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/mime/packages/x-java-archive.xml; size: 1822 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/desktop/mime/packages/x-java-jnlp-file.xml; size: 412 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/ext/cldrdata.jar; size: 3837830 bytes; exists: false
+       File options set to: [fileTime: Tue Oct 24 16:00:27 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/ext/dnsns.jar; size: 8150 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/ext/jaccess.jar; size: 43839 bytes; exists: false
+       File options set to: [fileTime: Tue Oct 24 16:00:50 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/ext/jfxrt.jar; size: 18480689 bytes; exists: false
+       File options set to: [fileTime: Tue Oct 24 16:00:46 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/ext/localedata.jar; size: 1174677 bytes; exists: false
+       File options set to: [fileTime: Tue Oct 24 16:00:49 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/ext/meta-index; size: 746 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 05:24:55 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/ext/nashorn.jar; size: 1983280 bytes; exists: false
+       File options set to: [fileTime: Tue Oct 24 16:00:33 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/ext/sunec.jar; size: 41672 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 05:24:55 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/ext/sunjce_provider.jar; size: 273952 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/ext/sunpkcs11.jar; size: 248726 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/ext/zipfs.jar; size: 67504 bytes; exists: false
+       File options set to: [fileTime: Tue Oct 24 16:00:51 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/flavormap.properties; size: 3901 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 05:24:55 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/fontconfig.RedHat.5.bfc; size: 4532 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/fontconfig.RedHat.5.properties.src; size: 8841 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/fontconfig.RedHat.6.bfc; size: 4250 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/fontconfig.RedHat.6.properties.src; size: 8735 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/fontconfig.SuSE.10.bfc; size: 6702 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/fontconfig.SuSE.10.properties.src; size: 16772 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/fontconfig.SuSE.11.bfc; size: 7032 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/fontconfig.SuSE.11.properties.src; size: 16781 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/fontconfig.Turbo.bfc; size: 4668 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/fontconfig.Turbo.properties.src; size: 9192 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/fontconfig.bfc; size: 1678 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/fontconfig.properties.src; size: 1938 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/fonts/LucidaBrightDemiBold.ttf; size: 75144 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/fonts/LucidaBrightDemiItalic.ttf; size: 75124 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/fonts/LucidaBrightItalic.ttf; size: 80856 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/fonts/LucidaBrightRegular.ttf; size: 344908 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/fonts/LucidaSansDemiBold.ttf; size: 317896 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/fonts/LucidaSansRegular.ttf; size: 698236 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/fonts/LucidaTypewriterBold.ttf; size: 234068 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/fonts/LucidaTypewriterRegular.ttf; size: 242700 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/fonts/fonts.dir; size: 4041 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/hijrah-config-umalqura.properties; size: 13962 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/images/cursors/cursors.properties; size: 1274 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/images/cursors/invalid32x32.gif; size: 153 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/images/cursors/motif_CopyDrop32x32.gif; size: 158 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/images/cursors/motif_CopyNoDrop32x32.gif; size: 153 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/images/cursors/motif_LinkDrop32x32.gif; size: 162 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/images/cursors/motif_LinkNoDrop32x32.gif; size: 153 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/images/cursors/motif_MoveDrop32x32.gif; size: 141 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/images/cursors/motif_MoveNoDrop32x32.gif; size: 153 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/images/icons/sun-java.png; size: 4707 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/images/icons/sun-java_HighContrast.png; size: 3729 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/images/icons/sun-java_HighContrastInverse.png; size: 3777 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/images/icons/sun-java_LowContrast.png; size: 4012 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/javafx.properties; size: 56 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 02:34:22 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/javaws.jar; size: 479338 bytes; exists: false
+       File options set to: [fileTime: Tue Oct 24 16:00:15 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/jce.jar; size: 116988 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 05:24:55 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/jexec; size: 10584 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 05:24:55 EDT 2017, mode: 755, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/jfr.jar; size: 558903 bytes; exists: false
+       File options set to: [fileTime: Tue Oct 24 15:58:47 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/jfr/default.jfc; size: 20109 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 05:24:55 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/jfr/profile.jfc; size: 20065 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/jfxswt.jar; size: 33469 bytes; exists: false
+       File options set to: [fileTime: Tue Oct 24 15:58:46 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/jsse.jar; size: 646581 bytes; exists: false
+       File options set to: [fileTime: Tue Oct 24 15:58:45 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/jvm.hprof.txt; size: 4226 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 05:24:55 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/locale/de/LC_MESSAGES/sunw_java_plugin.mo; size: 2483 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/locale/es/LC_MESSAGES/sunw_java_plugin.mo; size: 2477 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/locale/fr/LC_MESSAGES/sunw_java_plugin.mo; size: 2746 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/locale/it/LC_MESSAGES/sunw_java_plugin.mo; size: 2434 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/locale/ja/LC_MESSAGES/sunw_java_plugin.mo; size: 2415 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/locale/ko.UTF-8/LC_MESSAGES/sunw_java_plugin.mo; size: 2753 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/locale/ko/LC_MESSAGES/sunw_java_plugin.mo; size: 2399 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/locale/pt_BR/LC_MESSAGES/sunw_java_plugin.mo; size: 2420 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/locale/sv/LC_MESSAGES/sunw_java_plugin.mo; size: 2359 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/locale/zh.GBK/LC_MESSAGES/sunw_java_plugin.mo; size: 2002 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/locale/zh/LC_MESSAGES/sunw_java_plugin.mo; size: 2002 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/locale/zh_HK.BIG5HK/LC_MESSAGES/sunw_java_plugin.mo; size: 2025 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/locale/zh_TW.BIG5/LC_MESSAGES/sunw_java_plugin.mo; size: 2025 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/locale/zh_TW/LC_MESSAGES/sunw_java_plugin.mo; size: 2025 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/logging.properties; size: 2455 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/management-agent.jar; size: 370 bytes; exists: false
+       File options set to: [fileTime: Tue Oct 24 16:00:13 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/management/jmxremote.access; size: 3998 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 05:24:55 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/management/jmxremote.password.template; size: 2856 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/management/management.properties; size: 14630 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/management/snmp.acl.template; size: 3376 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/meta-index; size: 2034 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/net.properties; size: 4464 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/oblique-fonts/LucidaSansDemiOblique.ttf; size: 91352 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/oblique-fonts/LucidaSansOblique.ttf; size: 253724 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/oblique-fonts/LucidaTypewriterBoldOblique.ttf; size: 63168 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/oblique-fonts/LucidaTypewriterOblique.ttf; size: 137484 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/oblique-fonts/fonts.dir; size: 2115 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/plugin.jar; size: 942415 bytes; exists: false
+       File options set to: [fileTime: Tue Oct 24 16:00:08 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/psfont.properties.ja; size: 2796 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 05:24:55 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/psfontj2d.properties; size: 10393 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/resources.jar; size: 3505346 bytes; exists: false
+       File options set to: [fileTime: Tue Oct 24 16:00:13 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/rt.jar; size: 65995108 bytes; exists: false
+       File options set to: [fileTime: Tue Oct 24 16:00:06 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/security/blacklist; size: 4054 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 14 05:24:55 EDT 2017, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/security/blacklisted.certs; size: 1273 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/security/cacerts; size: 113367 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/security/java.policy; size: 2466 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/security/java.security; size: 38240 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/security/javaws.policy; size: 98 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/security/policy/limited/US_export_policy.jar; size: 3026 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/security/policy/limited/local_policy.jar; size: 3527 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/security/policy/unlimited/US_export_policy.jar; size: 3023 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/security/policy/unlimited/local_policy.jar; size: 3035 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/security/trusted.libraries; size: 0 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/sound.properties; size: 1210 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/lib/tzdb.dat; size: 105500 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/man/ja_JP.UTF-8/man1/java.1; size: 148688 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/man/ja_JP.UTF-8/man1/javaws.1; size: 6641 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/man/ja_JP.UTF-8/man1/jjs.1; size: 11365 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/man/ja_JP.UTF-8/man1/keytool.1; size: 111033 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/man/ja_JP.UTF-8/man1/orbd.1; size: 16092 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/man/ja_JP.UTF-8/man1/pack200.1; size: 14482 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/man/ja_JP.UTF-8/man1/policytool.1; size: 4020 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/man/ja_JP.UTF-8/man1/rmid.1; size: 19715 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/man/ja_JP.UTF-8/man1/rmiregistry.1; size: 4557 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/man/ja_JP.UTF-8/man1/servertool.1; size: 9081 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/man/ja_JP.UTF-8/man1/tnameserv.1; size: 17722 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/man/ja_JP.UTF-8/man1/unpack200.1; size: 5382 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/man/man1/java.1; size: 124796 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/man/man1/javaws.1; size: 4897 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/man/man1/jjs.1; size: 4932 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/man/man1/keytool.1; size: 86925 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/man/man1/orbd.1; size: 12180 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/man/man1/pack200.1; size: 11623 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/man/man1/policytool.1; size: 3235 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/man/man1/rmid.1; size: 15979 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/man/man1/rmiregistry.1; size: 3449 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/man/man1/servertool.1; size: 7237 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/man/man1/tnameserv.1; size: 15747 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/man/man1/unpack200.1; size: 4244 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/plugin/desktop/sun_java.desktop; size: 624 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/plugin/desktop/sun_java.png; size: 4351 bytes; exists: false
+       Install file: /home/algo/.i4j_jres/1.8.0_152_64/release; size: 424 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/2bfa42ba.lprop; size: 68 bytes; exists: false
+       File options set to: [fileTime: Tue Apr 17 23:35:34 EDT 2018, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/3257f6f9.lprop; size: 68 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/d958696.lprop; size: 266 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/ibgateway.png; size: 2427 bytes; exists: false
+       File options set to: [fileTime: Wed Oct 25 16:43:24 EDT 2017, mode: 644, overwriteMode: Always, shared: false, uninstallMode: Always, delayIfNecessary: false]
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/restarter; size: 12656 bytes; exists: false
+       File options set to: [fileTime: Tue Apr 17 23:35:34 EDT 2018, mode: 755, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/s_1fmt56t.png; size: 169149 bytes; exists: false
+       File options set to: [fileTime: Wed Oct 25 16:43:24 EDT 2017, mode: 644, overwriteMode: Always, shared: false, uninstallMode: Always, delayIfNecessary: false]
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/uninstall.png; size: 6648 bytes; exists: false
+       File options set to: [fileTime: Thu Nov 09 07:25:38 EST 2017, mode: 644, overwriteMode: Always, shared: false, uninstallMode: Always, delayIfNecessary: false]
+       Install file: /home/algo/Jts/ibgateway/970/ibgateway; size: 13156 bytes; exists: false
+       File options set to: [fileTime: Tue Apr 17 23:35:34 EDT 2018, mode: 755, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: /home/algo/Jts/ibgateway/970/jars/jts4launch-970.jar; size: 36377277 bytes; exists: false
+       File options set to: [fileTime: Tue Apr 17 14:23:58 EDT 2018, mode: 644, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: /home/algo/Jts/ibgateway/970/jars/locales.jar; size: 101918 bytes; exists: false
+       File options set to: [fileTime: Wed Nov 16 07:25:06 EST 2016, mode: 644, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: /home/algo/Jts/ibgateway/970/jars/log4j-api-2.5.jar; size: 101150 bytes; exists: false
+       File options set to: [fileTime: Wed Oct 25 16:43:26 EDT 2017, mode: 644, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: /home/algo/Jts/ibgateway/970/jars/log4j-core-2.5.jar; size: 565368 bytes; exists: false
+       File options set to: [fileTime: Wed Oct 25 16:43:24 EDT 2017, mode: 644, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: /home/algo/Jts/ibgateway/970/jars/total-2018.jar; size: 3818458 bytes; exists: false
+       File options set to: [fileTime: Tue Jan 23 16:56:32 EST 2018, mode: 644, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: /home/algo/Jts/ibgateway/970/jars/twslaunch-970.jar; size: 1226359 bytes; exists: false
+       File options set to: [fileTime: Tue Apr 17 23:05:36 EDT 2018, mode: 644, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: /home/algo/Jts/ibgateway/970/jars/twslaunch-install4j-1.8.jar; size: 11801 bytes; exists: false
+       File options set to: [fileTime: Wed Oct 25 16:43:24 EDT 2017, mode: 644, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: /home/algo/Jts/ibgateway/970/uninstall; size: 12804 bytes; exists: false
+       File options set to: [fileTime: Tue Apr 17 23:35:34 EDT 2018, mode: 700, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/inst_jre.cfg; size: 65 bytes; exists: false
+       File options set to: [fileTime: Sun Apr 22 18:11:47 EDT 2018, mode: 644, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/pref_jre.cfg; size: 34 bytes; exists: false
+       File options set to: [fileTime: Sun Apr 22 18:11:47 EDT 2018, mode: 644, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4jruntime.jar; size: 1606765 bytes; exists: false
+       File options set to: [fileTime: Sun Apr 22 18:11:47 EDT 2018, mode: 644, overwriteMode: Always, shared: false, uninstallMode: Always, delayIfNecessary: false]
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/MessagesDefault; size: 33680 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4jparams.conf; size: 92583 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/stats.properties; size: 329 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/user.jar; size: 28257 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_18_1txxd8f.properties; size: 1021 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_28_1txxd8f.utf8; size: 32406 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_13_1txxd8f.properties; size: 872 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_10_1txxd8f.utf8; size: 33852 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_25_1txxd8f.utf8; size: 38559 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_5_1txxd8f.properties; size: 1034 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_19_1txxd8f.utf8; size: 48901 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_39_1txxd8f.utf8; size: 37535 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_36_1txxd8f.utf8; size: 36290 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_12_1txxd8f.utf8; size: 32438 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_16_1txxd8f.properties; size: 987 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_21_1txxd8f.utf8; size: 34848 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_34_1txxd8f.utf8; size: 53098 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_42_1txxd8f_18gg8kx@2x.png; size: 15419 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_9_1txxd8f.utf8; size: 32114 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_31_1txxd8f.utf8; size: 35441 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_4_1txxd8f.utf8; size: 27656 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_27_1txxd8f.properties; size: 926 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_14_1txxd8f.utf8; size: 32787 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_11_1txxd8f.properties; size: 791 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_35_1txxd8f.properties; size: 3187 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_22_1txxd8f.properties; size: 935 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_15_1txxd8f.utf8; size: 38916 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_17_1txxd8f.utf8; size: 36087 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_40_1txxd8f_czgnkz.ico; size: 146982 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_8_1txxd8f.properties; size: 1202 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_29_1txxd8f.utf8; size: 34747 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_42_1txxd8f_18gg8kx.png; size: 9202 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_26_1txxd8f.utf8; size: 34684 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_2_1txxd8f.utf8; size: 28346 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_24_1txxd8f.properties; size: 2138 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_41_1txxd8f_d36cl.png; size: 955 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_3_1txxd8f.properties; size: 1034 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_32_1txxd8f.properties; size: 1075 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_0_1txxd8f.utf8; size: 33680 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_30_1txxd8f.utf8; size: 37640 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_1_1txxd8f.properties; size: 1337 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_7_1txxd8f.utf8; size: 33730 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_37_1txxd8f.properties; size: 930 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_38_1txxd8f.utf8; size: 31905 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_6_1txxd8f.utf8; size: 34549 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_23_1txxd8f.utf8; size: 44250 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_33_1txxd8f.utf8; size: 37406 bytes; exists: false
+       Install file: /home/algo/Jts/ibgateway/970/.install4j/i4j_extf_20_1txxd8f.utf8; size: 36810 bytes; exists: false
+       Execute action successful after 21494 ms
+[INFO] com.install4j.runtime.beans.actions.control.RunScriptAction [ID 2076]: Execute action
+       Property rollbackScript: null
+       Property script: com.install4j.script.I4jScript_Internal_14
+       Property rollbackSupported: false
+       Creating '/home/algo/Jts' directory...
+       Execute action successful after 6 ms
+[INFO] com.install4j.runtime.beans.actions.text.WriteTextFileAction [ID 2307]: Execute action
+       Property encoding: 
+       Property file: /home/algo/Jts/ibgateway/970/ibgateway.vmoptions
+       Property text: #
+# This file contains VM parameters for IB Gateway 970.
+# Each parameter should be defined in a separate line and the
+# last line must be followed by a line feed. No leading or
+# trailing whitespaces are allowed in the same line, where a
+# parameter is defined.
+#
+# Lines starting with a '#' character are treated as comments
+# and ignored. Additionally, if a line contains a
+# '### keep on update' string, all parameters defined below will
+# be preserved on update.
+#
+
+# maximum Java heap size
+-Xmx768m
+
+-Dinstaller.uuid=cdf4d6bb-1d92-49d8-8d57-2ed7b619820c
+-DvmOptionsPath=/home/algo/Jts/ibgateway/970/ibgateway.vmoptions
+-Dsun.awt.nopixfmt=true
+-Dsun.java2d.noddraw=true
+-Dswing.boldMetal=false
+-Dsun.locale.formatasdefault=true
+
+### keep on update
+
+       Property append: false
+       Property escaped: false
+       Property logText: true
+       Property rollbackSupported: true
+       Execute action successful after 1 ms
+[INFO] com.install4j.runtime.beans.actions.desktop.CreateProgramGroupAction [ID 10]: Execute action
+       Property categories: Application
+       Property linkDirectory: /usr/local/bin
+       Property programGroupEntryConfigs: []
+       Property programGroupName: IB Gateway 970
+       Property uninstallerMenuName: IB Gateway 970 Uninstaller
+       Property addDefaultLauncherLinks: true
+       Property addUninstaller: true
+       Property allUsers: true
+       Property failForSymlinksNotCreated: false
+       Property rollbackSupported: true
+       Property unixMenuEntries: true
+       Property unixSymlinks: true
+       Variable changed: sys.programGroupName=IB Gateway 970[class java.lang.String]
+       Variable changed: sys.symlinkDir=/usr/local/bin[class java.lang.String]
+       Install file: /home/algo/Jts/ibgateway/970/IB Gateway 970.desktop; size: 206 bytes; exists: false
+       File options set to: [fileTime: Sun Apr 22 18:11:47 EDT 2018, mode: 755, overwriteMode: Always, shared: false, uninstallMode: Always, delayIfNecessary: false]
+[ERROR] com.install4j.runtime.beans.actions.desktop.CreateProgramGroupAction [ID 10]: /usr/local/bin/ibgateway
+[INFO] com.install4j.runtime.beans.actions.desktop.CreateProgramGroupAction [ID 10]: Execute action successful after 8 ms
+[INFO] com.install4j.runtime.beans.actions.desktop.RegisterAddRemoveAction [ID 11]: Execute action
+       Property icon: i4j_extf_40_1txxd8f_czgnkz.ico
+       Property iconSource: Custom icon
+       Property itemName: IB Gateway 970
+       Property persistentProperties: {}
+       Property rollbackSupported: true
+       Execute action successful after 0 ms
+[INFO] com.install4j.runtime.beans.actions.desktop.CreateDesktopLinkAction [ID 54]: Execute action
+       Property arguments: 
+       Property description: IB Gateway 970
+       Property file: ibgateway
+       Property name: IB Gateway 970
+       Property startIn: null
+       Property unixIconFile: null
+       Property winIconFile: null
+       Property allUsers: true
+       Property macSingleBundleTarget: false
+       Property rollbackSupported: true
+       Property runAsAdministrator: false
+[ERROR] com.install4j.runtime.beans.actions.desktop.CreateDesktopLinkAction [ID 54]: Desktop directory /home/algo/Desktop does not exist
+        Execute action not successful after 0 ms
+[INFO] com.install4j.runtime.beans.actions.text.WriteTextFileAction [ID 2244]: Execute action
+       Property encoding: 
+       Property file: /home/algo/Jts/ibgateway/970/.install4j/.installSuccess
+       Property text: .
+       Property append: false
+       Property escaped: true
+       Property logText: true
+       Property rollbackSupported: true
+       Execute action successful after 0 ms
+[INFO] com.install4j.runtime.beans.screens.InstallationScreen [ID 8]: Rollback barrier reached
+       command: move 1 screens, executing actions, checking condition
+[INFO] com.install4j.runtime.beans.screens.FormScreen [ID 2790]: Show screen
+       Variable changed: executeLauncherAction=false[class java.lang.Boolean]
+[INFO] com.install4j.runtime.beans.screens.FormScreen [ID 2790]: command: finish
+       cleaning up
+       Finished

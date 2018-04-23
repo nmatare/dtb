@@ -1,0 +1,21 @@
+[Unit]
+Description=IBController (for users: use 'systemctl --user start ibcontroller')
+After=network.target
+
+[Service]
+Type=simple
+TimeoutSec=0
+KillMode=control-group
+
+# starts xvfb headless shell to launch gateway into
+ExecStartPre=/bin/sh -c "mkdir -p %t/xvfb"
+
+# start xvfb and bind java binary to custom Jts and IBController classes
+ExecStart=/usr/bin/xvfb-run --auto-servernum \
+        -f %t/xvfb/%i /home/algo/.i4j_jres/1.8.0_152_64/bin/java \
+        -cp %h/Jts/ibgateway/970/jars/*:/usr/share/java/ibcontroller/ibcontroller.jar \
+        -Xmx512M ibcontroller.IBGatewayController %h/Jts/%u.ini
+
+[Install]
+WantedBy=default.target
+

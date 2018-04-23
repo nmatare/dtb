@@ -1,0 +1,7 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Type=Application
+Name=IB Gateway 970
+Exec="/home/algo/Jts/ibgateway/970/ibgateway"
+Icon=/home/algo/Jts/ibgateway/970/.install4j/ibgateway.png
+Categories=Application;
